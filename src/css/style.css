@@ -223,9 +223,13 @@ main {
 
 
 @media screen and (max-width: 600px) {
+   header {
+      align-items: center;
+   }
+
    h1 {
-      font-size: 4rem;
-      margin-bottom: 50%;
-      transform: translateY(-50%);
+      text-align: center;
+      font-size: 5rem;
+      margin-bottom: 0;
    }
 }
