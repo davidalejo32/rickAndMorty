@@ -35,6 +35,7 @@ let peticion = async (url) => {
 
       for(let i=1; i<=nPersonajes; i++){
          let personaje = await promise(url+i); 
+         let ubicacion = await promise(personaje.episode[0]); 
 
          // let elem = document.createElement()
          cardContent.innerHTML += ` 
@@ -56,12 +57,12 @@ let peticion = async (url) => {
             </div>
             <div class="ubication-1">
                <p>Última ubicación conocida</p>
-               <p>Citadel of Ricks</p>
+               <p>${personaje.location.name}</p>
             </div>
    
             <div class="ubication-1">
                <p>Visto por primera vez en</p>
-               <p>The Rickshank Rickdemption</p>
+               <p>${ubicacion.name}</p>
             </div>
    
          </div>
