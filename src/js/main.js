@@ -45,7 +45,7 @@ let peticion = async (url) => {
          <div class="card-content ">  
          
          <figure id="figure-img" >
-            <img src="${personaje.image}" alt="${personaje.name}">
+            <img src="${personaje.image}" alt="Imagen de ${personaje.name}">
             <figcaption class="name">${personaje.name}</figcaption>
          </figure>
    

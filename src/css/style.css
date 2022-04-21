@@ -224,20 +224,7 @@ figure::before {
   color: rgb(192, 192, 192);
 }
 
-
-@media screen and (max-width: 600px) {
-   header {
-      align-items: center;
-   }
-
-   h1 {
-      text-align: center;
-      font-size: 5rem;
-      margin-bottom: 0;
-   }
-}
-
-/* loader */
+/* ======= loader ========*/
 
 .load {
   width: 100%;
@@ -288,5 +275,17 @@ figure::before {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+     align-items: center;
+  }
+
+  h1 {
+     text-align: center;
+     font-size: 5rem;
+     margin-bottom: 0;
   }
 }
