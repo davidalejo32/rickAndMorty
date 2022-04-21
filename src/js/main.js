@@ -27,6 +27,8 @@ let figureImage = document.querySelector("#figure-img");
 
 let tpl = document.createDocumentFragment();
 
+
+
 let peticion = async (url) => {
    try{
       const data = await promise(url);
@@ -97,14 +99,14 @@ let peticion = async (url) => {
       $clase.forEach(element => {
          element.addEventListener("click", ()=> {
             const $cardContent = element.querySelector(".card-content");
-            const $cardInfo = element.querySelector(".card-info")
- 
-            $cardInfo.classList.toggle("card-info-show");
-            element.classList.toggle("grandian-show");
+            $cardContent.classList.toggle("card-content--rotate");
          })
       });
       
-
+      let $loader = document.querySelector(".load");
+      $loader.style.opacity = "0";
+      $loader.style.pointerEvents = "none";
+      
 
    }catch(err){
       console.error(err);
@@ -112,6 +114,9 @@ let peticion = async (url) => {
 }
 
 peticion(API);
+
+
+
 
 
 
