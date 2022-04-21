@@ -101,6 +101,16 @@ let peticion = async (url) => {
             const $cardContent = element.querySelector(".card-content");
             $cardContent.classList.toggle("card-content--rotate");
          })
+
+         
+         let $opacidad = element.querySelector("figure");
+         element.addEventListener("mouseover", () => {
+            $opacidad.classList.add("opacidad");
+         });
+
+         element.addEventListener("mouseout", (event) => {
+            $opacidad.classList.remove("opacidad");
+         });
       });
       
       let $loader = document.querySelector(".load");
